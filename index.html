@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>01_ANALISIS_06_Metodologias_Desarrollo_de_Software</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css">
+
+  
+</head>
+<body>
+
+<!-- ── SIDEBAR ── -->
+<nav class="sidebar">
+  <div class="sidebar-logo">
+    <div class="eyebrow">Ingeniería de Software</div>
+    <h2>Metodologías de Desarrollo</h2>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-label">Introducción</div>
+    <a href="#intro" class="nav-item">
+      <span class="nav-dot dot-main"></span>¿Qué son las metodologías?
+    </a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-label">Marcos Tradicionales</div>
+    <a href="#cascada" class="nav-item">
+      <span class="nav-dot dot-trad"></span>Cascada (Waterfall)
+    </a>
+    <a href="#rup" class="nav-item">
+      <span class="nav-dot dot-trad"></span>RUP
+    </a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-label">Marcos Ágiles</div>
+    <a href="#xp" class="nav-item">
+      <span class="nav-dot dot-agile"></span>XP — Programación Extrema
+    </a>
+    <a href="#rad" class="nav-item">
+      <span class="nav-dot dot-agile"></span>RAD
+    </a>
+    <a href="#scrum" class="nav-item">
+      <span class="nav-dot dot-agile"></span>Scrum
+    </a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-label">Planeación</div>
+    <a href="#planeacion" class="nav-item">
+      <span class="nav-dot dot-plan"></span>Planeación de Proyectos
+    </a>
+    <a href="#comparacion" class="nav-item">
+      <span class="nav-dot dot-plan"></span>Comparación General
+    </a>
+  </div>
+</nav>
+
+<!-- ── MAIN ── -->
+<main class="main">
+
+  <!-- HERO -->
+  <section class="hero" id="intro">
+    <div class="hero-eyebrow">// Guía de Estudio · Ingeniería de Software</div>
+    <h1>Metodologías de <span class="accent">Desarrollo</span> de Software</h1>
+    <p class="hero-desc">
+      Un conjunto de enfoques, marcos y prácticas que guían cómo los equipos planifican, diseñan, construyen y entregan software. Cada metodología responde de forma distinta a las preguntas de <em>cuándo</em>, <em>cómo</em> y <em>con quién</em> se trabaja.
+    </p>
+    <div class="badge-row">
+      <span class="badge badge-trad">● Marcos Tradicionales</span>
+      <span class="badge badge-agile">● Marcos Ágiles</span>
+      <span class="badge badge-plan">● Planeación de Proyectos</span>
+    </div>
+  </section>
+
+  <!-- DEFINICIÓN GENERAL -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-eyebrow eyebrow-main">DEFINICIÓN BASE</div>
+      <h2>¿Qué es una metodología de desarrollo?</h2>
+      <p>Antes de explorar los marcos específicos, es fundamental entender qué diferencia una metodología de otra y por qué elegir la correcta importa.</p>
+    </div>
+
+    <div class="def-box def-box-cyan">
+      <div class="def-label">Definición</div>
+      <p class="def-text">
+        Una <strong>metodología de desarrollo de software</strong> es un conjunto estructurado de principios, procesos, prácticas y herramientas que guían la forma en que un equipo organiza y ejecuta el trabajo para crear software. Define roles, actividades, artefactos y el orden en que se realizan las tareas durante el ciclo de vida del proyecto.
+      </p>
+    </div>
+
+    <div class="example-block">
+      <div class="example-label">// Analogía</div>
+      <p>Imagina construir una casa. Puedes seguir planos arquitectónicos completos antes de poner el primer ladrillo (enfoque tradicional), o construir habitación por habitación según las necesidades del cliente, ajustando sobre la marcha (enfoque ágil). La metodología es ese "plano de trabajo".</p>
+    </div>
+
+    <div class="card-grid" style="margin-top: 32px;">
+      <div class="card card-trad">
+        <span class="card-tag tag-trad">Tradicional</span>
+        <h3>Enfoque Predictivo</h3>
+        <p class="acronym">Plan-driven · Sequential</p>
+        <p>Se planifica todo al inicio. Los requisitos se fijan antes de comenzar el desarrollo. Son ideales para proyectos con alcance claro y cambios mínimos esperados.</p>
+      </div>
+      <div class="card card-agile">
+        <span class="card-tag tag-agile">Ágil</span>
+        <h3>Enfoque Adaptativo</h3>
+        <p class="acronym">Value-driven · Iterative</p>
+        <p>El producto se construye en ciclos cortos. Los requisitos pueden cambiar. El cliente participa activamente. Ideales para entornos inciertos o cambiantes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARCOS TRADICIONALES - INTRO -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-eyebrow eyebrow-trad">MARCOS TRADICIONALES</div>
+      <h2>Desarrollo orientado al plan</h2>
+      <p>Los marcos tradicionales establecen fases secuenciales y bien definidas. La documentación exhaustiva y la predictibilidad son sus pilares. Funcionan mejor cuando los requisitos son estables desde el inicio.</p>
+    </div>
+  </section>
+
+  <!-- CASCADA -->
+  <div class="method-section" id="cascada">
+    <div class="method-header">
+      <div class="method-icon icon-trad">💧</div>
+      <div class="method-title">
+        <h3>Modelo en Cascada (Waterfall)</h3>
+        <span class="sub">Propuesto por Winston Royce · 1970</span>
+      </div>
+    </div>
+
+    <div class="def-box def-box-yellow">
+      <div class="def-label">Definición</div>
+      <p class="def-text">El <strong>Modelo en Cascada</strong> es una metodología de desarrollo secuencial donde cada fase debe completarse totalmente antes de que comience la siguiente. Sigue un flujo lineal hacia abajo —como una cascada— sin retrocesos formales entre etapas. Es el modelo más antiguo y uno de los más documentados en la ingeniería de software.</p>
+    </div>
+
+    <p style="color: var(--text-muted); margin: 20px 0 12px; font-size: 14px;">Fases del ciclo de vida:</p>
+    <div class="phases">
+      <div class="phase"><span class="phase-num">01</span>Requisitos</div>
+      <div class="phase"><span class="phase-num">02</span>Diseño del sistema</div>
+      <div class="phase"><span class="phase-num">03</span>Implementación</div>
+      <div class="phase active-phase"><span class="phase-num">04</span>Pruebas</div>
+      <div class="phase"><span class="phase-num">05</span>Despliegue</div>
+      <div class="phase"><span class="phase-num">06</span>Mantenimiento</div>
+    </div>
+
+    <div class="principles">
+      <div class="principle">
+        <span class="principle-dot" style="background:var(--yellow)"></span>
+        Cada fase produce entregables documentados antes de avanzar
+      </div>
+      <div class="principle">
+        <span class="principle-dot" style="background:var(--yellow)"></span>
+        Los cambios tardíos son costosos y difíciles de incorporar
+      </div>
+      <div class="principle">
+        <span class="principle-dot" style="background:var(--yellow)"></span>
+        El cliente ve el producto terminado al final del proceso
+      </div>
+      <div class="principle">
+        <span class="principle-dot" style="background:var(--yellow)"></span>
+        Alta dependencia de documentación técnica detallada
+      </div>
+    </div>
+
+    <div class="example-block">
+      <div class="example-label">// Ejemplo Real</div>
+      <p>
+        Un banco necesita un <strong>sistema de nómina</strong> para 500 empleados. Los requisitos son conocidos: cálculo de salarios, deducciones, reportes fiscales. El equipo documenta todo en la fase de requisitos, diseña la base de datos completa, desarrolla el sistema, lo prueba en masa y finalmente lo entrega. Como los requisitos no cambiarán (las leyes tributarias están fijas para el año), Cascada funciona perfectamente aquí.
+      </p>
+    </div>
+    
+    <div class="card-grid" style="margin-top: 24px;">
+      <div class="card card-trad">
+        <span class="card-tag tag-trad">✓ Ventajas</span>
+        <h3>Cuándo usar Cascada</h3>
+        <p>Proyectos con requisitos bien definidos y estables. Contratos gubernamentales o de defensa. Sistemas embebidos con hardware específico. Cuando la documentación exhaustiva es un requisito contractual.</p>
+      </div>
+      <div class="card" style="border-color:rgba(255,107,107,0.25);">
+        <span class="card-tag" style="border-color:rgba(255,107,107,0.4);color:var(--red);background:rgba(255,107,107,0.08);">⚠ Limitaciones</span>
+        <h3>Cuándo evitar Cascada</h3>
+        <p>Proyectos donde los requisitos evolucionan. Startups o productos innovadores con alta incertidumbre. Proyectos largos donde el mercado puede cambiar antes de la entrega.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- RUP -->
+  <div class="method-section" id="rup">
+    <div class="method-header">
+      <div class="method-icon icon-trad">🏛️</div>
+      <div class="method-title">
+        <h3>Proceso Racional Unificado</h3>
+        <span class="sub">RUP · Rational Software (IBM) · 1996</span>
+      </div>
+    </div>
+
+    <div class="def-box def-box-yellow">
+      <div class="def-label">Definición</div>
+      <p class="def-text">
+        El <strong>Proceso Racional Unificado (RUP)</strong> es un marco de proceso de desarrollo de software iterativo e incremental. Aunque es considerado tradicional por su énfasis en documentación y roles formales, introduce iteraciones dentro de fases, lo que permite cierta adaptabilidad. Utiliza el lenguaje UML como estándar de modelado y divide el ciclo de vida en cuatro fases con hitos específicos.
+      </p>
+    </div>
+
+    <p style="color: var(--text-muted); margin: 20px 0 12px; font-size: 14px;">Las cuatro fases de RUP:</p>
+    <div class="phases">
+      <div class="phase active-phase"><span class="phase-num">I</span>Inicio</div>
+      <div class="phase"><span class="phase-num">II</span>Elaboración</div>
+      <div class="phase"><span class="phase-num">III</span>Construcción</div>
+      <div class="phase"><span class="phase-num">IV</span>Transición</div>
+    </div>
+
+    <div class="principles">
+      <div class="principle">
+        <span class="principle-dot" style="background:var(--yellow)"></span>
+        Desarrollo iterativo e incremental en ciclos cortos
+      </div>
+      <div class="principle">
+        <span class="principle-dot" style="background:var(--yellow)"></span>
+        Gestión de requisitos mediante Casos de Uso (UML)
+      </div>
+      <div class="principle">
+        <span class="principle-dot" style="background:var(--yellow)"></span>
+        Arquitectura basada en componentes reutilizables
+      </div>
+      <div class="principle">
+        <span class="principle-dot" style="background:var(--yellow)"></span>
+        Control de calidad continuo durante todo el ciclo
+      </div>
+      <div class="principle">
+        <span class="principle-dot" style="background:var(--yellow)"></span>
+        Gestión del cambio sistematizada con herramientas
+      </div>
+      <div class="principle">
+        <span class="principle-dot" style="background:var(--yellow)"></span>
+        Roles bien definidos: Arquitecto, Desarrollador, Tester...
+      </div>
+    </div>
+
+    <div class="example-block">
+      <div class="example-label">// Ejemplo Real</div>
+      <p>
+        Una empresa de telecomunicaciones necesita un <strong>sistema de facturación empresarial</strong>. Con RUP, en la fase de Inicio se define el alcance y viabilidad. En Elaboración se modela la arquitectura con diagramas UML (casos de uso, diagramas de clases). En Construcción se desarrollan módulos iterativamente (facturación, pagos, reportes). En Transición se capacita al personal y se migran datos del sistema antiguo. Cada iteración produce software funcional y probado.
+      </p>
+    </div>
+  </div>
+
+  <!-- MARCOS ÁGILES - INTRO -->
+  <section class="section" id="marcos-agiles">
+    <div class="section-header">
+      <div class="section-eyebrow eyebrow-agile">MARCOS ÁGILES</div>
+      <h2>Desarrollo iterativo y adaptativo</h2>
+      <p>Nacidos del <strong>Manifiesto Ágil (2001)</strong>, estos marcos priorizan individuos sobre procesos, software funcional sobre documentación exhaustiva, colaboración con el cliente sobre negociación contractual, y respuesta al cambio sobre seguir un plan.</p>
+    </div>
+
+    <div class="def-box def-box-green">
+      <div class="def-label">Los 4 Valores del Manifiesto Ágil (2001)</div>
+      <p class="def-text">
+        <strong>1.</strong> Individuos e interacciones &gt; Procesos y herramientas &nbsp;·&nbsp;
+        <strong>2.</strong> Software funcionando &gt; Documentación exhaustiva &nbsp;·&nbsp;
+        <strong>3.</strong> Colaboración con el cliente &gt; Negociación contractual &nbsp;·&nbsp;
+        <strong>4.</strong> Respuesta al cambio &gt; Seguir un plan
+      </p>
+    </div>
+  </section>
+
+  <!-- XP -->
+  <div class="method-section" id="xp">
+    <div class="method-header">
+      <div class="method-icon icon-agile">⚡</div>
+      <div class="method-title">
+        <h3>Programación Extrema</h3>
+        <span class="sub">XP · eXtreme Programming · Kent Beck · 1999</span>
+      </div>
+    </div>
+
+    <div class="def-box def-box-green">
+      <div class="def-label">Definición</div>
+      <p class="def-text">
+        La <strong>Programación Extrema (XP)</strong> es una metodología ágil que lleva las buenas prácticas de desarrollo de software "al extremo". Se enfoca especialmente en mejorar la calidad del software y la capacidad de respuesta ante requisitos cambiantes. XP introduce prácticas técnicas como programación en pareja, desarrollo guiado por pruebas y integración continua como elementos centrales, no opcionales.
+      </p>
+    </div>
+
+    <p style="color: var(--text-muted); margin: 20px 0 12px; font-size: 14px;">Los 5 valores de XP:</p>
+    <div class="principles">
+      <div class="principle">
+        <span class="principle-dot" style="background:var(--green)"></span>
+        <span><strong style="color:var(--text-primary)">Comunicación</strong> — El equipo y el cliente hablan constantemente</span>
+      </div>
+      <div class="principle">
+        <span class="principle-dot" style="background:var(--green)"></span>
+        <span><strong style="color:var(--text-primary)">Simplicidad</strong> — Hacer solo lo necesario, nada más</span>
+      </div>
+      <div class="principle">
+        <span class="principle-dot" style="background:var(--green)"></span>
+        <span><strong style="color:var(--text-primary)">Retroalimentación</strong> — Ciclos cortos de prueba y corrección</span>
+      </div>
+      <div class="principle">
+        <span class="principle-dot" style="background:var(--green)"></span>
+        <span><strong style="color:var(--text-primary)">Valentía</strong> — Refactorizar sin miedo, decir la verdad</span>
+      </div>
+      <div class="principle">
+        <span class="principle-dot" style="background:var(--green)"></span>
+        <span><strong style="color:var(--text-primary)">Respeto</strong> — Todos aportan valor, nadie socava a otro</span>
+      </div>
+    </div>
+
+    <p style="color: var(--text-muted); margin: 24px 0 12px; font-size: 14px;">Prácticas técnicas clave:</p>
+    <div class="principles">
+      <div class="principle">
+        <span class="principle-dot" style="background:var(--cyan)"></span>
+        <span><strong style="color:var(--text-primary)">Pair Programming</strong> — Dos programadores, una máquina</span>
+      </div>
+      <div class="principle">
+        <span class="principle-dot" style="background:var(--cyan)"></span>
+        <span><strong style="color:var(--text-primary)">TDD</strong> — Escribir la prueba antes que el código</span>
+      </div>
+      <div class="principle">
+        <span class="principle-dot" style="background:var(--cyan)"></span>
+        <span><strong style="color:var(--text-primary)">Refactoring</strong> — Mejorar el código sin cambiar su comportamiento</span>
+      </div>
+      <div class="principle">
+        <span class="principle-dot" style="background:var(--cyan)"></span>
+        <span><strong style="color:var(--text-primary)">Integración Continua</strong> — Integrar y probar muchas veces al día</span>
+      </div>
+      <div class="principle">
+        <span class="principle-dot" style="background:var(--cyan)"></span>
+        <span><strong style="color:var(--text-primary)">Releases Pequeños</strong> — Entregar valor frecuentemente</span>
+      </div>
+      <div class="principle">
+        <span class="principle-dot" style="background:var(--cyan)"></span>
+        <span><strong style="color:var(--text-primary)">Cliente in situ</strong> — El cliente disponible todo el tiempo</span>
+      </div>
+    </div>
+
+    <div class="example-block">
+      <div class="example-label">// Ejemplo Real</div>
+      <p>
+        Un equipo de 5 desarrolladores construye una <strong>plataforma e-commerce</strong>. Con XP: trabajan en parejas (uno codifica, otro revisa en tiempo real). Antes de implementar el carrito de compras, escriben pruebas que definan cómo debe funcionar (TDD). Cada vez que alguien hace un commit, el sistema automáticamente compila y ejecuta todos los tests (Integración Continua). El representante del cliente está disponible en Slack para aclarar dudas al instante. Cada semana se despliega una versión funcional al cliente para retroalimentación.
+      </p>
+    </div>
+  </div>
+
+  <!-- RAD -->
+  <div class="method-section" id="rad">
+    <div class="method-header">
+      <div class="method-icon icon-agile">🚀</div>
+      <div class="method-title">
+        <h3>Desarrollo Rápido de Aplicaciones</h3>
+        <span class="sub">RAD · Rapid Application Development · James Martin · 1991</span>
+      </div>
+    </div>
+
+    <div class="def-box def-box-green">
+      <div class="def-label">Definición</div>
+      <p class="def-text">
+        El <strong>Desarrollo Rápido de Aplicaciones (RAD)</strong> es una metodología que prioriza la velocidad de entrega sobre la planificación exhaustiva. Utiliza prototipos iterativos, herramientas de desarrollo visual y participación intensiva del usuario para entregar software funcional en tiempos muy cortos (típicamente menos de 60-90 días). Sacrifica documentación formal por rapidez y retroalimentación directa.
+      </p>
+    </div>
+
+    <p style="color: var(--text-muted); margin: 20px 0 12px; font-size: 14px;">Fases del ciclo RAD:</p>
+    <div class="phases">
+      <div class="phase active-phase"><span class="phase-num">01</span>Planificación de requisitos</div>
+      <div class="phase"><span class="phase-num">02</span>Diseño del usuario</div>
+      <div class="phase"><span class="phase-num">03</span>Construcción rápida</div>
+      <div class="phase"><span class="phase-num">04</span>Transición</div>
+    </div>
+
+    <div class="principles">
+      <div class="principle">
+        <span class="principle-dot" style="background:var(--green)"></span>
+        Uso intensivo de prototipos y maquetas visuales
+      </div>
+      <div class="principle">
+        <span class="principle-dot" style="background:var(--green)"></span>
+        Equipos pequeños (4-6 personas) muy especializados
+      </div>
+      <div class="principle">
+        <span class="principle-dot" style="background:var(--green)"></span>
+        Herramientas CASE y generadores de código automático
+      </div>
+      <div class="principle">
+        <span class="principle-dot" style="background:var(--green)"></span>
+        Participación constante del usuario final en revisiones
+      </div>
+      <div class="principle">
+        <span class="principle-dot" style="background:var(--green)"></span>
+        Reutilización de componentes y código existente
+      </div>
+      <div class="principle">
+        <span class="principle-dot" style="background:var(--green)"></span>
+        Ciclos de prototipado de 60-90 días máximo
+      </div>
+    </div>
+
+    <div class="example-block">
+      <div class="example-label">// Ejemplo Real</div>
+      <p>
+        Una cadena de restaurantes necesita una <strong>app de pedidos en línea</strong> para el próximo mes por una promoción especial. Con RAD: en la semana 1, el equipo muestra wireframes de la pantalla de menú al cliente. En la semana 2, hay un prototipo clicable con diseño real. El cliente prueba, sugiere cambios ("agrega filtros por alérgenos"), el equipo ajusta en 2 días. En la semana 6 ya hay una versión beta funcional siendo probada por 50 usuarios reales. En la semana 10, la app está publicada. Sin RAD, el mismo proyecto en Cascada habría tardado 6 meses.
+      </p>
+    </div>
+  </div>
+
+  <!-- SCRUM -->
+  <div class="method-section" id="scrum">
+    <div class="method-header">
+      <div class="method-icon icon-agile">🏉</div>
+      <div class="method-title">
+        <h3>Scrum</h3>
+        <span class="sub">Ken Schwaber & Jeff Sutherland · 1995 · Framework ágil más usado del mundo</span>
+      </div>
+    </div>
+
+    <div class="def-box def-box-green">
+      <div class="def-label">Definición</div>
+      <p class="def-text">
+        <strong>Scrum</strong> es un marco de trabajo ágil liviano que ayuda a personas, equipos y organizaciones a generar valor a través de soluciones adaptativas para problemas complejos. Se basa en ciclos cortos de trabajo llamados <em>Sprints</em> (1-4 semanas), roles bien definidos y un conjunto mínimo de eventos y artefactos. No dicta técnicas de ingeniería, sino que provee una estructura organizacional para el trabajo iterativo.
+      </p>
+    </div>
+
+    <p style="color: var(--text-muted); margin: 20px 0 12px; font-size: 14px;">El flujo del Sprint en Scrum:</p>
+    <div class="sprint-flow">
+      <div class="sprint-box"><strong>Product Backlog</strong>Lista de todo lo que el producto necesita</div>
+      <div class="sprint-arrow">→</div>
+      <div class="sprint-box" style="border-color:rgba(54,232,160,0.3);background:rgba(54,232,160,0.06)"><strong>Sprint Planning</strong>Selección del trabajo del Sprint</div>
+      <div class="sprint-arrow">→</div>
+      <div class="sprint-box" style="border-color:rgba(54,232,160,0.3);background:rgba(54,232,160,0.06)"><strong>Sprint (1-4 sem)</strong>Daily Scrum diario · Desarrollo</div>
+      <div class="sprint-arrow">→</div>
+      <div class="sprint-box"><strong>Sprint Review</strong>Demo al cliente</div>
+      <div class="sprint-arrow">→</div>
+      <div class="sprint-box"><strong>Retrospectiva</strong>¿Qué mejorar?</div>
+    </div>
+
+    <p style="color: var(--text-muted); margin: 24px 0 12px; font-size: 14px;">Los 3 roles de Scrum:</p>
+    <div class="card-grid">
+      <div class="card card-agile">
+        <h3>Product Owner</h3>
+        <p>Maximiza el valor del producto. Es dueño del <em>Product Backlog</em>: prioriza, define y ordena las historias de usuario. Representa la voz del cliente dentro del equipo.</p>
+      </div>
+      <div class="card card-agile">
+        <h3>Scrum Master</h3>
+        <p>Facilitador y guardián del proceso Scrum. Elimina impedimentos, protege al equipo de distracciones externas y promueve la mejora continua. No es un jefe de proyecto.</p>
+      </div>
+      <div class="card card-agile">
+        <h3>Developers</h3>
+        <p>Equipo auto-organizado (3-9 personas) responsable de crear un Incremento de producto potencialmente entregable al final de cada Sprint. Multifuncional y sin jerarquías internas.</p>
+      </div>
+    </div>
+
+    <div class="example-block">
+      <div class="example-label">// Ejemplo Real</div>
+      <p>
+        Un equipo de 6 personas desarrolla una <strong>plataforma de aprendizaje en línea</strong>. El Product Owner prioriza el backlog: primero el módulo de videos, luego quizzes, luego certificados. Inicia el Sprint 1 (2 semanas): el equipo se compromete a construir el reproductor de video con soporte para subtítulos. Cada mañana hay un Daily Scrum de 15 minutos: "¿qué hice ayer?, ¿qué haré hoy?, ¿hay impedimentos?". Al final del Sprint, hacen la Review: el Product Owner y usuarios reales prueban el reproductor. La Retrospectiva revela que las reuniones de diseño tardaban mucho → en el Sprint 2 usan mockups previos. Sprint tras sprint, el producto crece.
+      </p>
+    </div>
+  </div>
+
+  <!-- PLANEACIÓN -->
+  <section class="section" id="planeacion">
+    <div class="section-header">
+      <div class="section-eyebrow eyebrow-plan">PLANEACIÓN DE PROYECTOS</div>
+      <h2>Planeación de Proyectos de Software</h2>
+      <p>La planeación es el proceso de definir qué se construirá, cuándo, con qué recursos y bajo qué restricciones. Es transversal a todas las metodologías, aunque su forma varía significativamente entre enfoques tradicionales y ágiles.</p>
+    </div>
+
+    <div class="def-box def-box-purple">
+      <div class="def-label">Definición</div>
+      <p class="def-text">
+        La <strong>planeación de proyectos de software</strong> es el proceso de identificar y estructurar todas las actividades, recursos, tiempos, costos y riesgos necesarios para llevar un proyecto desde su concepción hasta su entrega exitosa. Incluye la definición del alcance, estimación de esfuerzo, asignación de roles y gestión de expectativas con los interesados.
+      </p>
+    </div>
+
+    <p style="color: var(--text-muted); margin: 24px 0 12px; font-size: 14px;">Componentes fundamentales de la planeación:</p>
+    <div class="card-grid">
+      <div class="card card-plan">
+        <span class="card-tag tag-plan">Alcance</span>
+        <h3>Gestión del Alcance</h3>
+        <p>Define qué está dentro y qué está fuera del proyecto. Incluye la creación de la <em>Estructura de Desglose del Trabajo (EDT/WBS)</em> que divide el proyecto en componentes manejables.</p>
+      </div>
+      <div class="card card-plan">
+        <span class="card-tag tag-plan">Tiempo</span>
+        <h3>Estimación y Cronograma</h3>
+        <p>Técnicas como <em>Puntos de Historia</em>, <em>Planning Poker</em>, <em>Análisis de Puntos de Función</em> o <em>Juicio Experto</em> para estimar esfuerzo. Diagramas de Gantt y redes PERT/CPM para planificar el tiempo.</p>
+      </div>
+      <div class="card card-plan">
+        <span class="card-tag tag-plan">Recursos</span>
+        <h3>Gestión de Recursos</h3>
+        <p>Identificación del equipo, sus roles y habilidades. Presupuesto de hardware, software y licencias. Definición de la velocidad del equipo (<em>velocity</em> en contextos ágiles).</p>
+      </div>
+      <div class="card card-plan">
+        <span class="card-tag tag-plan">Riesgos</span>
+        <h3>Gestión de Riesgos</h3>
+        <p>Identificación, análisis (probabilidad × impacto) y respuesta a riesgos: rotación del equipo, cambios tecnológicos, requisitos ambiguos, deuda técnica acumulada.</p>
+      </div>
+      <div class="card card-plan">
+        <span class="card-tag tag-plan">Calidad</span>
+        <h3>Plan de Calidad</h3>
+        <p>Definición de criterios de aceptación, métricas de calidad (cobertura de pruebas, densidad de defectos), estrategias de testing y procesos de revisión de código.</p>
+      </div>
+      <div class="card card-plan">
+        <span class="card-tag tag-plan">Comunicación</span>
+        <h3>Plan de Comunicación</h3>
+        <p>¿Quién necesita saber qué, cuándo y mediante qué canal? Frecuencia de reportes a stakeholders, herramientas de colaboración, reuniones periódicas definidas.</p>
+      </div>
+    </div>
+
+    <div class="example-block" style="margin-top:28px;">
+      <div class="example-label">// Ejemplo de Planeación en un Proyecto Real</div>
+      <p>
+        Una empresa de salud quiere construir un <strong>portal de pacientes</strong>. La planeación incluye: <br/><br/>
+        <strong style="color:var(--text-primary)">Alcance:</strong> consulta de citas, descarga de resultados de laboratorio, chat con médico. NO incluye: facturación ni gestión de inventario médico.<br/>
+        <strong style="color:var(--text-primary)">Tiempo:</strong> usando Planning Poker, el equipo estima 80 puntos de historia. A una velocidad de 20 puntos/sprint (2 semanas), serán 4 sprints = 8 semanas de desarrollo.<br/>
+        <strong style="color:var(--text-primary)">Riesgos:</strong> regulación HIPAA (privacidad médica) puede retrasar la aprobación → mitigación: involucrar asesoría legal desde la semana 1.<br/>
+        <strong style="color:var(--text-primary)">Calidad:</strong> cobertura mínima de pruebas del 80%, pruebas de seguridad obligatorias antes de cada release.
+      </p>
+    </div>
+  </div>
+
+  <!-- TABLA COMPARATIVA -->
+  <section class="section" id="comparacion">
+    <div class="section-header">
+      <div class="section-eyebrow eyebrow-main">COMPARACIÓN GENERAL</div>
+      <h2>¿Cuándo usar cada metodología?</h2>
+      <p>Ninguna metodología es universalmente mejor. La elección correcta depende del contexto del proyecto, el equipo y las expectativas del cliente.</p>
+    </div>
+
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Metodología</th>
+          <th>Tipo</th>
+          <th>Mejor para</th>
+          <th>Equipo ideal</th>
+          <th>Énfasis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-name">💧 Cascada</td>
+          <td><span class="badge badge-trad" style="padding:3px 10px;font-size:10px;">Tradicional</span></td>
+          <td>Requisitos fijos, proyectos gubernamentales</td>
+          <td>Grande, jerárquico</td>
+          <td>Documentación y previsibilidad</td>
+        </tr>
+        <tr>
+          <td class="col-name">🏛️ RUP</td>
+          <td><span class="badge badge-trad" style="padding:3px 10px;font-size:10px;">Tradicional</span></td>
+          <td>Proyectos grandes, sistemas empresariales</td>
+          <td>Grande, roles formales</td>
+          <td>Arquitectura, UML, procesos</td>
+        </tr>
+        <tr>
+          <td class="col-name">⚡ XP</td>
+          <td><span class="badge badge-agile" style="padding:3px 10px;font-size:10px;">Ágil</span></td>
+          <td>Software de alta calidad técnica, startups tech</td>
+          <td>Pequeño (2-10), experto</td>
+          <td>Prácticas técnicas de ingeniería</td>
+        </tr>
+        <tr>
+          <td class="col-name">🚀 RAD</td>
+          <td><span class="badge badge-agile" style="padding:3px 10px;font-size:10px;">Ágil</span></td>
+          <td>Prototipos rápidos, plazos muy cortos</td>
+          <td>Pequeño (4-6), especializado</td>
+          <td>Velocidad de entrega</td>
+        </tr>
+        <tr>
+          <td class="col-name">🏉 Scrum</td>
+          <td><span class="badge badge-agile" style="padding:3px 10px;font-size:10px;">Ágil</span></td>
+          <td>Productos con requisitos evolutivos</td>
+          <td>Mediano (3-9), auto-organizado</td>
+          <td>Organización iterativa del trabajo</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="page-footer">
+    <p>// Metodologías de Desarrollo de Software //</p>
+  </footer>
+
+</main>
+
+<script>
+  // Highlight active nav item on scroll
+  const sections = document.querySelectorAll('[id]');
+  const navItems = document.querySelectorAll('.nav-item');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navItems.forEach(item => {
+          item.classList.remove('active');
+          if (item.getAttribute('href') === '#' + entry.target.id) {
+            item.classList.add('active');
+          }
+        });
+      }
+    });
+  }, { threshold: 0.3, rootMargin: '-10% 0px -60% 0px' });
+
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
